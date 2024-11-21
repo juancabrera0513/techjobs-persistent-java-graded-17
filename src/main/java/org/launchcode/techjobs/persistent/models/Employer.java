@@ -20,8 +20,7 @@ import java.util.List;
 
         @OneToMany
         @JoinColumn(name = "employer_id")
-
-        private List<Job>jobs= new ArrayList<>();
+        private final List<Job>jobs= new ArrayList<>();
 
         public Employer() {
         }
@@ -37,4 +36,8 @@ import java.util.List;
         public void setLocation (String location) {
             this.location = location;
         }
+
+        public List<Job> getJobs() {
+        return jobs;
+         }
     }
